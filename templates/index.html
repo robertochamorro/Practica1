@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+
+<h1>Getting server updates</h1>
+<div id="result"></div>
+
+
+</div>
+<!-- Scripts, head en head -->
+<!-- <head background-color: black;	display: block;	>  -->
+<!-- Se refresca la pagina web -->
+<!-- <meta http-equiv="Refresh" content="10;url=http://192.168.186.129:5000/" />  -->
+
+	
+
+
+
+</head> 
+
+<!-- En body se mete todo lo demas -->
+<body style="background:#80BFFF">
+	
+  	<form action="/result1" method="post">
+         <p>Threshold value (%): <input type = "text" name = "max_value" /></p>
+         
+
+         <p><input type = "submit" value = "Submit1" /></p>
+    </form>
+	<p>
+	<!-- Bton  para solicitar el valor medio de las cotizaciones guardadas -->
+  	<form action="/average" method="post">
+         
+         
+
+         <p><input type = "submit" value = "Average" /></p>
+    </form>
+	 
+	<form action="/thingspeak" method="post">
+         
+         
+
+         <p><input type = "submit" value = "Thingspeak Graph" /></p>
+    </form>
+	 
+	
+</body>
+</html>
+
+
+ 
+ 

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <body>
+   <div id="result"></div>
+	<script type="text/javascript">
+
+	if(typeof(EventSource) !== "undefined") 
+	{
+		var source = new EventSource("/result1");
+		source.onmessage = function(event) 
+		{
+			document.getElementById("result").innerHTML += event.data + "<br>";
+		};
+	} 
+	else 
+	{
+		document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+	}
+	</script>
+	
+	
+	<div id="result2"></div>
+	<script type="text/javascript">
+
+	if(typeof(EventSource) !== "undefined") 
+	{
+		var source = new EventSource("/result1");
+		source.onmessage = function(event) 
+		{
+			document.getElementById("result2").innerHTML += event.data + "<br>";
+		};
+	} 
+	else 
+	{
+		document.getElementById("result2").innerHTML = "Sorry, your browser does not support server-sent events...";
+	}
+	</script>
+	<!-- Se realiza la grafica utilizando Thing Speak -->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/196552/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=5&type=line"></iframe> 
+   </body>
+</html>
