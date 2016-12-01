@@ -2,7 +2,7 @@
 <html>
 
 
-<h1>Getting server updates</h1>
+<h1><font color="white">Application web</font></h1>
 <div id="result"></div>
 
 
@@ -18,11 +18,12 @@
 
 </head> 
 
-<!-- En body se mete todo lo demas -->
-<body style="background:#80BFFF">
+<!-- En body se mete todo lo demas -->  
+<body background="http://www.pullback.es/wp-content/uploads/2013/09/value_investing_GC.jpg">
+	 <!-- <p><img src="http://efinancialresourcecenter.com/files/2013/05/Stock-Market.jpg" alt="" width="4256"height="2832" /></p> -->
 	
   	<form action="/result1" method="post">
-         <p>Threshold value (%): <input type = "text" name = "max_value" /></p>
+         <p><font color="white">Threshold value (%):</font> <input type = "text" name = "max_value" /></p>
          
 
          <p><input type = "submit" value = "Submit1" /></p>
@@ -42,6 +43,24 @@
 
          <p><input type = "submit" value = "Thingspeak Graph" /></p>
     </form>
+	
+	<!-- <button onclick="myFunction()">Try it</button> -->
+
+	{% if flag == 1 %}
+	<script>
+	alert("Exceeded maximum prize value!")
+	</script>
+	{% endif %}
+	 
+	 {% if flag == 0 %}
+	<script>
+	alert("Exceeded minimum prize value!")
+	</script>
+	{% endif %}
+	
+	{% if aux == 1 %}
+	<p><font color="white">Updated prize value: {{result_last }}</p>
+	{% endif %}
 	 
 	
 </body>
